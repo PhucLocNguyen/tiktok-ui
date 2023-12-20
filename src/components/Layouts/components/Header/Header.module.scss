@@ -1,0 +1,102 @@
+.wrapper {
+    width: 100%;
+    background-color: var(--dark-color);
+    box-shadow: 0px 1px 1px var(--white-color);
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 5px 10px 5px 10px;
+    }
+    .logo > img {
+        padding: 10px 0px 0px 5px;
+    }
+    .searchForm {
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.12);
+        border-radius: 95px;
+        width: 516px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .searchForm > input {
+        padding: 0px 20px;
+        font-size: 1.5rem;
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        background-color: transparent;
+        border-radius: 95px;
+        border: none;
+        color: var(--white-color);
+        caret-color: var(--primary-color);
+        outline: none;
+    }
+    .searchForm .submitSearchBtn {
+        background-color: transparent;
+        position: relative;
+        z-index: 2;
+        outline: none;
+        border: none;
+        border-radius: 0px 35px 35px 0px;
+        cursor: pointer;
+    }
+    .searchIcon {
+        padding: 11px 16px 11px 12px;
+        width: 24px;
+        height: 24px;
+        color: rgba(255, 255, 255, 0.34);
+    }
+    .searchForm > input::placeholder {
+        color: var(--white-color);
+        font-size: 1.5rem;
+    }
+
+    .searchForm > input:not(:placeholder-shown) ~ .submitSearchBtn > .searchIcon {
+        color: var(--white-color);
+    }
+    .searchForm > input:not(:placeholder-shown) ~ .submitSearchBtn {
+        background-color: var(--primary-color);
+    }
+
+    .inputBorder {
+        display: none;
+        position: absolute;
+        inset: 0px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 92px;
+        z-index: 1;
+    }
+    .searchForm > input:not(:placeholder-shown) ~ .inputBorder {
+        display: block;
+    }
+
+    .searchForm:hover .inputBorder {
+        display: block;
+    }
+    .searchForm:hover .submitSearchBtn {
+        background-color: var(--primary-color);
+    }
+    .searchForm:hover .searchIcon {
+        color: #fff;
+    }
+    .searchForm > input:focus ~ .inputBorder {
+        display: block;
+        border-color: var(--primary-color);
+        border-width: 2px;
+    }
+}
+
+.loading {
+}
+.clear {
+}
+
+.span-line {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.12);
+    width: 1px;
+    height: 28px;
+}

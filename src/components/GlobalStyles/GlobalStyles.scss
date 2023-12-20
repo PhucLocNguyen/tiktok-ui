@@ -3,9 +3,14 @@
 
 :root {
     --primary-color: #ff3b5c;
+    --dark-color: #121212;
+    --white-color: #fff;
+    --gray-color: rgba(22, 24, 35, 0.06);
+    --placeholder-black: rgb(22, 24, 35);
 }
 
 * {
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -18,4 +23,8 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
+}
+a,
+button {
+    cursor: pointer;
 }
